@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="splashVM"
+            type="com.example.myrealtrip.presentaion.viewmodels.SplashVM" />
+
+        <variable
+            name="logoResourceId"
+            type="Integer" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/main_logo"
+            android:layout_width="180dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="50dp"
+            app:circle_crop="@{logoResourceId}"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/news_logo" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="0dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/earth"
+            app:layout_constraintBottom_toBottomOf="@id/main_logo"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintRight_toLeftOf="@id/main_logo"
+            tools:src="@drawable/earth" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/wifi"
+            app:layout_constraintBottom_toBottomOf="@id/main_logo"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintLeft_toRightOf="@id/main_logo"
+            tools:src="@drawable/wifi" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/first_row"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="210dp"
+                android:text="@string/splash_row1"
+                android:textColor="@color/colorBlock"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/second_row"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxWidth="210dp"
+                android:text="@string/splash_row2"
+                android:textColor="@color/colorBlock"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="@id/first_row"
+                app:layout_constraintTop_toBottomOf="@id/first_row" />
+
+            <TextView
+                android:id="@+id/third_row"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:maxWidth="210dp"
+                android:text="@string/splash_row3"
+                android:textColor="@color/colorBlock"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="@id/first_row"
+                app:layout_constraintTop_toBottomOf="@id/second_row" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="@string/app_version"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
