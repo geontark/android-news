@@ -7,7 +7,7 @@
 
         <variable
             name="splashVM"
-            type="com.example.myrealtrip.presentaion.viewmodels.SplashVM" />
+            type="com.example.news.presentaion.viewmodels.SplashVM" />
 
         <variable
             name="logoResourceId"

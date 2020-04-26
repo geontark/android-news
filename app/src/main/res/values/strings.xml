@@ -1,7 +1,9 @@
 <resources>
-    <string name="app_name">MyRealTrip</string>
+    <string name="app_name">News</string>
     <string name="app_version">Version 1.0.1</string>
     <string name="splash_row1">최신뉴스를 제공합니다.</string>
     <string name="splash_row2">뉴스의 키워드를 알아보세요</string>
     <string name="splash_row3">뉴스를 클릭하면 원본 뉴스를 볼 수 있습니다.</string>
+
+    <string name="toast_network_check">네트워크를 확인해주세요</string>
 </resources>

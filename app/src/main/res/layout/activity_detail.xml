@@ -7,7 +7,7 @@
 
         <variable
             name="detailVM"
-            type="com.example.myrealtrip.presentaion.viewmodels.DetailVM" />
+            type="com.example.news.presentaion.viewmodels.DetailVM" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -63,10 +63,11 @@
             android:id="@+id/webview"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginTop="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/keywordscontainer"
             app:layout_constraintVertical_bias="1"
-            app:loadWebView="@{detailVM.webViewUrl}"
+            app:load_webview="@{detailVM.webViewUrl}"
             tools:layout_editor_absoluteX="0dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
