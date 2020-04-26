@@ -25,10 +25,6 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_home)
 
-
-        System.out.println("----HomeActivity---")
-
-
         injectFeature()
 
         mBinding.apply {

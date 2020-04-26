@@ -1,4 +1,5 @@
 package com.example.news.datasource.business
+
 import com.example.news.data.models.KeywordData
 import com.example.news.extenstions.replaceSpecialSpace
 
@@ -13,7 +14,7 @@ import com.example.news.extenstions.replaceSpecialSpace
  * 3. 정렬하기 (나온횟수 많은 순 -> 사전순)
  */
 
-fun extractKeywords(count: Int, description: String): ArrayList<KeywordData>  {
+fun extractKeywords(count: Int, description: String): ArrayList<KeywordData> {
     val keywordMap = HashMap<String, Int>()
     val keywordList = ArrayList<KeywordData>()
     var index = 0
@@ -43,9 +44,10 @@ fun extractKeywords(count: Int, description: String): ArrayList<KeywordData>  {
         }
     }
 
-    when(keywordList.isEmpty()){
+    when (keywordList.isEmpty()) {
         true -> return ArrayList<KeywordData>()
-        false -> return keywordList.sortedWith(keywordComparator).take(count) as ArrayList<KeywordData>
+        false -> return keywordList.sortedWith(keywordComparator)
+            .take(count) as ArrayList<KeywordData>
     }
 
 }

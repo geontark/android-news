@@ -12,8 +12,7 @@
             type="android.view.View.OnClickListener" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -31,69 +30,69 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/title"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:textSize="18sp"
-                app:layout_constraintLeft_toRightOf="@id/thumbnail"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginLeft="10dp"
-                app:text="@{news.title}"
-                tools:text="기사제목기사제목기사제목기사제목" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toRightOf="@id/thumbnail"
+            app:layout_constraintTop_toTopOf="parent"
+            app:text="@{news.title}"
+            tools:text="기사제목기사제목기사제목기사제목" />
 
-            <TextView
-                android:id="@+id/description"
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:paddingTop="3dp"
-                app:layout_constraintLeft_toLeftOf="@id/title"
-                app:layout_constraintTop_toBottomOf="@id/title"
-                app:text="@{news.description}"
-                tools:text="기사 설명 기사 설명 기사 설명기사 설명기사 설명기사 설명 기사 설명 기사 설명기사 설명기사 설명" />
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingTop="3dp"
+            app:layout_constraintLeft_toLeftOf="@id/title"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            app:text="@{news.description}"
+            tools:text="기사 설명 기사 설명 기사 설명기사 설명기사 설명기사 설명 기사 설명 기사 설명기사 설명기사 설명" />
 
-            <LinearLayout
-                android:id="@+id/keywords"
+        <LinearLayout
+            android:id="@+id/keywords"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            app:bind_keywords="@{news.keywords}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/title"
+            app:layout_constraintTop_toBottomOf="@id/description">
+
+            <Button
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:gravity="bottom"
-                android:orientation="horizontal"
-                app:bind_keywords="@{news.keywords}"
-                app:layout_constraintLeft_toLeftOf="@id/title"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/description">
+                android:layout_height="wrap_content"
+                android:background="@drawable/radius"
+                android:textAllCaps="false"
+                android:textSize="8sp"
+                android:visibility="gone" />
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/radius"
-                    android:textAllCaps="false"
-                    android:textSize="8sp"
-                    android:visibility="gone" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/radius"
+                android:textAllCaps="false"
+                android:textSize="8sp"
+                android:visibility="gone" />
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="2dp"
-                    android:background="@drawable/radius"
-                    android:textAllCaps="false"
-                    android:textSize="8sp"
-                    android:visibility="gone" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:background="@drawable/radius"
+                android:textAllCaps="false"
+                android:textSize="8sp"
+                android:visibility="gone" />
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="2dp"
-                    android:background="@drawable/radius"
-                    android:textAllCaps="false"
-                    android:textSize="8sp"
-                    android:visibility="gone" />
-
-            </LinearLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

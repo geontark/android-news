@@ -40,9 +40,11 @@ class NewsRemoteDataSourceImpl constructor(private val newsApi: NewsApi) : NewsR
             val deferred = CoroutineScope(Dispatchers.IO).async {
                 val article = newsData.link.let { newsApi.getNews(it) }
 
-                newsData.thumbnail = article?.select("meta[property=og:image]")?.first()?.attr("content") ?: ""
-                newsData.description = article?.select("meta[property=og:description]")?.first()?.attr("content") ?: ""
-                newsData.keywords = extractKeywords(3,newsData.description)
+                newsData.thumbnail =
+                    article?.select("meta[property=og:image]")?.first()?.attr("content") ?: ""
+                newsData.description =
+                    article?.select("meta[property=og:description]")?.first()?.attr("content") ?: ""
+                newsData.keywords = extractKeywords(3, newsData.description)
 
                 newsData
             }
@@ -56,12 +58,13 @@ class NewsRemoteDataSourceImpl constructor(private val newsApi: NewsApi) : NewsR
         return result
     }
 
+    //     기사글을 요청후 요청이 완료되지 않은 시점에서 요청 취소하기
     override fun cancelGet(): Boolean {
         try {
             defferList.map { it.cancel() }
             defferList = ArrayList<Deferred<NewsData>>()
             return true
-        }catch (e: Exception){
+        } catch (e: Exception) {
             return false
         }
     }
