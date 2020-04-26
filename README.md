@@ -2,6 +2,7 @@
 android news App
 
 <Architecture & Skills>
+<br>
 Clean Architecture,
 MVVM,
 Koin
@@ -13,5 +14,6 @@ Koin
 <br>
 
 <앱설명>
+<br>
 최근 구글뉴스 기사와 기사에서 키워드를 추출하여 사용자에게 보여주는 앱입니다.
 
