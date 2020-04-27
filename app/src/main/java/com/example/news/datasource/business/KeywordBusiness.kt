@@ -20,7 +20,6 @@ fun extractKeywords(count: Int, description: String): ArrayList<KeywordData> {
     var index = 0
 
 
-
     description.let {
         it.replaceSpecialSpace()?.split("\\s+".toRegex())?.let {
             it.forEach { key ->
@@ -49,7 +48,6 @@ fun extractKeywords(count: Int, description: String): ArrayList<KeywordData> {
         false -> return keywordList.sortedWith(keywordComparator)
             .take(count) as ArrayList<KeywordData>
     }
-
 }
 
 /**
